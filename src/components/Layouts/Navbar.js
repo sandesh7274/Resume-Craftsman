@@ -13,7 +13,7 @@ const Navbar = () => {
       as='header'
     >
       <Heading as='h3' ml={{ base: 0, sm: 8 }} size='lg' fontWeight={'thin'} color='purple.500' style={{ fontFamily: "Pacifico" }}>
-        Resumegen
+        ResumeCraftsman
       </Heading>
       <Spacer></Spacer>
       <HStack spacing={10} mr={{ base: 0, sm: 8 }} as='nav' style={{ fontFamily: 'Poppins' }}>
