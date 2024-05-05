@@ -10,6 +10,9 @@ import {
 import { FaInstagram, FaLinkedin, FaGithub, FaTwitter ,FaGoogle } from 'react-icons/fa';
 
 const Footer = () => {
+    const handleMailClick = () => {
+        window.open('https://mail.google.com/mail/u/0/?fs=1&tf=cm&to=Sandeshkolekar2004@gmail.com', "_blank");
+    };
     return (
         <Box
             bg={useColorModeValue('gray.100', 'gray.900')}
@@ -41,7 +44,7 @@ const Footer = () => {
   isRound={true}
   as={'a'}
   href={'mailto:Sandeshkolekar2004@gmail.com'}
-  target='_blank'
+  onClick={handleMailClick}
   colorScheme={'pink'}
 ><FaGoogle />
                     </IconButton>

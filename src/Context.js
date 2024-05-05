@@ -10,7 +10,7 @@ export const ResumeProvider = ({ children }) => {
     const printElem = useRef();
     const toast = useToast();
 
-    const [theme, setTheme] = useState('purple.400');
+    const [theme, setTheme] = useState('blue.400');
 
     const [about, setAbout] = useState({
         name: "",
