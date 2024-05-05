@@ -36,7 +36,7 @@ const Main = () => {
 
                 <Stack justifyContent={'space-between'} pt={4} direction={{ base: 'column', sm: 'row' }}>
                     <ThemeSelect />
-                    <Button rightIcon={<MdOutlineFileDownload />} onClick={handlePrint} colorScheme={'purple'}>Download</Button>
+                    <Button rightIcon={<MdOutlineFileDownload />} onClick={handlePrint} colorScheme={'blue'}>Download</Button>
                 </Stack>
 
             </Container>

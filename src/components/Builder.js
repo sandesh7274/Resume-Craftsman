@@ -14,7 +14,7 @@ const Builder = () => {
             bg={'white'}
             w={'full'}
             maxW={'xl'}
-            // minH={'100vh'}
+            minH={'100vh'}
             rounded={'md'}
             shadow={'md'}
             overflow={'hidden'}

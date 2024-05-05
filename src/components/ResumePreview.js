@@ -16,7 +16,7 @@ import { RiLinkedinBoxFill } from "react-icons/ri";
 import { BiLinkExternal } from "react-icons/bi";
 
 const ResumePreview = () => {
-  const { theme, about, educationList, skills, workList, projects, printElem } =
+  const { theme,   educationList, skills, workList, projects, printElem } =
     useResume();
     const imgStyle = {
       width:"115px",
@@ -27,6 +27,12 @@ const ResumePreview = () => {
       borderRadius: "50%",
      
     };
+  
+  const { about } = useResume();
+  const handleMailClick = () => {
+      const gmailComposeUrl = `https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=${about.email}`;
+      window.open(gmailComposeUrl, "_blank");
+    };  
   return (
     <>
       <Box
@@ -64,9 +70,11 @@ const ResumePreview = () => {
             p={4}
             justifyContent={"space-between"}
           >
-            <HStack spacing={1}>
-              <MdMail />{" "}
-              <Text>{about.email ? about.email : "jhondoe@gmail.com"}</Text>
+            <HStack spacing={1} onClick={handleMailClick} style={{ cursor: "pointer" }}>
+                <MdMail />
+                <Text as="a" href={`mailto:${about.email}`}>
+                    {about.email ? about.email : "jhondoe@gmail.com"}
+                </Text>
             </HStack>
             <HStack spacing={1}>
               <MdLocalPhone />{" "}
